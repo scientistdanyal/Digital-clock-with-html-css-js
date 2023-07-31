@@ -13,6 +13,7 @@ function updateClock(){
  if (h > 12){
     h = h -12;
     ampm = "PM";
+
  }
 
 
@@ -21,7 +22,9 @@ function updateClock(){
   minuteE1.innerText = m;
   secondsE1.innerText = s 
   ampmE1.innerText = ampm
-
+  setTimeout(()=>{
+   updateClock()
+},1000)
 
 }
 
